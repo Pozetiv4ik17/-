@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Світ Мар’яни</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#f7f5ff;
+    color:#333;
+}
+
+/* HEADER */
+
+header{
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+    background:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 60px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+    z-index:1000;
+}
+
+.logo{
+    font-size:30px;
+    font-weight:bold;
+    color:#b14cff;
+}
+
+nav a{
+    text-decoration:none;
+    margin-left:25px;
+    color:#333;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#b14cff;
+}
+
+/* HERO */
+
+.hero{
+    height:100vh;
+    background:linear-gradient(135deg,#f7d6ff,#d8f7ff);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:50px;
+}
+
+.hero-content{
+    max-width:800px;
+}
+
+.hero h1{
+    font-size:75px;
+    margin-bottom:20px;
+    color:#7b2cff;
+}
+
+.hero p{
+    font-size:24px;
+    line-height:1.7;
+    margin-bottom:35px;
+}
+
+.btn{
+    display:inline-block;
+    padding:16px 40px;
+    background:#b14cff;
+    color:white;
+    border-radius:40px;
+    text-decoration:none;
+    font-size:20px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#9128e8;
+    transform:scale(1.05);
+}
+
+/* SECTION */
+
+section{
+    padding:120px 80px;
+}
+
+.section-title{
+    text-align:center;
+    font-size:50px;
+    margin-bottom:60px;
+    color:#7b2cff;
+}
+
+/* ABOUT */
+
+.about{
+    display:flex;
+    gap:50px;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+.about img{
+    width:350px;
+    border-radius:30px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+.about-text{
+    flex:1;
+}
+
+.about-text p{
+    font-size:22px;
+    line-height:1.8;
+    margin-bottom:20px;
+}
+
+/* CARDS */
+
+.cards{
+    display:flex;
+    gap:30px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.card{
+    width:320px;
+    background:white;
+    padding:35px;
+    border-radius:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.1);
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card h3{
+    margin-bottom:20px;
+    color:#7b2cff;
+    font-size:28px;
+}
+
+.card p{
+    font-size:19px;
+    line-height:1.7;
+}
+
+/* GALLERY */
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+.gallery img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+    border-radius:25px;
+    transition:0.4s;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+.gallery img:hover{
+    transform:scale(1.03);
+}
+
+/* THOUGHTS */
+
+.post{
+    background:white;
+    padding:35px;
+    border-radius:25px;
+    margin-bottom:30px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+.post h3{
+    color:#7b2cff;
+    margin-bottom:20px;
+    font-size:30px;
+}
+
+.post p{
+    font-size:20px;
+    line-height:1.8;
+}
+
+/* CONTACT */
+
+.contact-box{
+    background:white;
+    padding:50px;
+    border-radius:30px;
+    max-width:700px;
+    margin:auto;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
+
+.contact-box p{
+    font-size:24px;
+    margin:20px 0;
+}
+
+/* FOOTER */
+
+footer{
+    background:white;
+    text-align:center;
+    padding:30px;
+    font-size:18px;
+    margin-top:50px;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+header{
+    flex-direction:column;
+    gap:20px;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:50px;
+}
+
+.hero p{
+    font-size:20px;
+}
+
+section{
+    padding:100px 30px;
+}
+
+.about{
+    flex-direction:column;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">Світ Мар’яни ✨</div>
+
+<nav>
+<a href="#home">Головна</a>
+<a href="#about">Про мене</a>
+<a href="#hobby">Захоплення</a>
+<a href="#gallery">Фото</a>
+<a href="#thoughts">Думки</a>
+<a href="#contact">Контакти</a>
+</nav>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<h1>Мар’яна 🌸</h1>
+
+<p>
+Привіт ✨
+Мене звати Мар’яна. Мені 16 років і я живу в Муравищах.
+Навчаюсь у Княгининку, люблю творчість, красиві заходи сонця,
+фотографії природи та затишні вечори з музикою.
+Цей сайт — мій маленький світ натхнення та мрій 💖
+</p>
+
+<a href="#about" class="btn">Дізнатися більше</a>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<h2 class="section-title">Про мене 🌷</h2>
+
+<div class="about">
+
+<div class="about-text">
+
+<p>
+Я дуже люблю малювати та створювати щось красиве.
+У вільний час люблю гуляти природою, слухати музику
+та фотографувати красиві моменти життя.
+</p>
+
+<p>
+Мої друзі кажуть, що я добра, творча та завжди можу підтримати.
+Мені подобаються теплі кольори, естетика Pinterest
+та атмосферні фотографії.
+</p>
+
+<p>
+У майбутньому я хочу багато подорожувати,
+відвідати Париж, Італію та побачити океан 🌊
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- HOBBIES -->
+
+<section id="hobby">
+
+<h2 class="section-title">Мої захоплення ✨</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>🎨 Малювання</h3>
+<p>
+Люблю малювати людей, природу та створювати власні ескізи.
+Для мене це спосіб показати свої емоції.
+</p>
+</div>
+
+<div class="card">
+<h3>📸 Фото</h3>
+<p>
+Обожнюю фотографувати заходи сонця, квіти,
+небо та красиві моменти з життя.
+</p>
+</div>
+
+<div class="card">
+<h3>🌿 Природа</h3>
+<p>
+Найбільше люблю тишу природи,
+лісові прогулянки та теплі літні вечори.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- GALLERY -->
+
+<section id="gallery">
+
+<h2 class="section-title">Фотоальбом 📷</h2>
+
+<div class="gallery">
+
+<img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb">
+
+<img src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e">
+
+<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+
+<img src="https://images.unsplash.com/photo-1500534623283-312aade485b7">
+
+<img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e">
+
+<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
+
+</div>
+
+</section>
+
+<!-- THOUGHTS -->
+
+<section id="thoughts">
+
+<h2 class="section-title">Мої думки 💭</h2>
+
+<div class="post">
+
+<h3>Мрії ✨</h3>
+
+<p>
+Я вірю, що кожна людина має мрію,
+яка робить її сильнішою.
+Навіть маленькі кроки можуть привести
+до великого успіху.
+</p>
+
+</div>
+
+<div class="post">
+
+<h3>Щастя 🌸</h3>
+
+<p>
+Для мене щастя — це теплі обійми,
+гарна музика, друзі поруч
+та моменти, які хочеться пам’ятати все життя.
+</p>
+
+</div>
+
+<div class="post">
+
+<h3>Натхнення 🌿</h3>
+
+<p>
+Найбільше натхнення я знаходжу у природі.
+Іноді достатньо просто подивитися на небо,
+щоб знову захотіти творити.
+</p>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<h2 class="section-title">Контакти 💌</h2>
+
+<div class="contact-box">
+
+<p>📧 maryana.art@gmail.com</p>
+
+<p>📱 Instagram: @maryana.life</p>
+
+<p>📍 Муравища, Україна</p>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+© 2026 Світ Мар’яни ✨ | Персональний блог
+</p>
+
+</footer>
+
+</body>
+</html>
